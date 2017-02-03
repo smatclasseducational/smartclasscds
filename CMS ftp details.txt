@@ -1,0 +1,3 @@
+ftp://10.0.20.130:1024   --CMS FTP
+ftp://10.0.20.130:1048   --smartclass ftp
+http://10.0.20.130:91     --CMS Web Services
