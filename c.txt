@@ -1,0 +1,206 @@
+Comparing files D:\a.txt and D:\B.TXT
+Resync Failed.  Files are too different.
+***** D:\a.txt
+C:\AUTOEXEC.BAT
+C:\CONFIG.SYS
+C:\Documents and Settings
+C:\Inetpub
+C:\Intel
+C:\Program Files
+C:\RHDSetup.log
+C:\temp
+C:\TempEI4
+C:\Test
+C:\WINDOWS
+C:\Documents and Settings\abhishek
+C:\Documents and Settings\abishek
+C:\Documents and Settings\ABISHEKG
+C:\Documents and Settings\Administrator
+C:\Documents and Settings\All Users
+C:\Documents and Settings\abhishek\.android
+C:\Documents and Settings\abhishek\console.log
+C:\Documents and Settings\abhishek\daemonprocess.txt
+C:\Documents and Settings\abhishek\Desktop
+C:\Documents and Settings\abhishek\Favorites
+C:\Documents and Settings\abhishek\My Documents
+C:\Documents and Settings\abhishek\Start Menu
+C:\Documents and Settings\abhishek\.android\adbkey
+C:\Documents and Settings\abhishek\.android\adbkey.pub
+C:\Documents and Settings\abhishek\Application Data\Adobe
+C:\Documents and Settings\abhishek\Application Data\AdobeUM
+C:\Documents and Settings\abhishek\Application Data\CDXReader
+C:\Documents and Settings\abhishek\Application Data\CoreFTP
+C:\Documents and Settings\abhishek\Application Data\DigitalSites
+C:\Documents and Settings\abhishek\Application Data\DivX
+C:\Documents and Settings\abhishek\Application Data\DVDVideoSoft
+C:\Documents and Settings\abhishek\Application Data\educomp.smartclass
+C:\Documents and Settings\abhishek\Application Data\FileZilla
+C:\Documents and Settings\abhishek\Application Data\Identities
+C:\Documents and Settings\abhishek\Application Data\LavFilters
+C:\Documents and Settings\abhishek\Application Data\Macromedia
+C:\Documents and Settings\abhishek\Application Data\MappingModule
+C:\Documents and Settings\abhishek\Application Data\Media Player Classic
+C:\Documents and Settings\abhishek\Application Data\Mozilla
+C:\Documents and Settings\abhishek\Application Data\MySQL
+C:\Documents and Settings\abhishek\Application Data\newnext.me
+C:\Documents and Settings\abhishek\Application Data\Notepad++
+C:\Documents and Settings\abhishek\Application Data\OpenCandy
+C:\Documents and Settings\abhishek\Application Data\PriceMeterUpdater
+C:\Documents and Settings\abhishek\Application Data\RhinoSoft
+C:\Documents and Settings\abhishek\Application Data\SimilarSites
+C:\Documents and Settings\abhishek\Application Data\Subversion
+C:\Documents and Settings\abhishek\Application Data\Sun
+C:\Documents and Settings\abhishek\Application Data\TightVNC
+C:\Documents and Settings\abhishek\Application Data\TortoiseSVN
+C:\Documents and Settings\abhishek\Application Data\WB.CFG
+C:\Documents and Settings\abhishek\Application Data\WinRAR
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR
+C:\Documents and Settings\abhishek\Application Data\Adobe\ESD
+C:\Documents and Settings\abhishek\Application Data\Adobe\Flash Player
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\AdobeCMapFnt07.lst
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\AdobeSysFnt07.lst
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Collab
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\JavaScripts
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\JSADM.exv
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Preferences
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Security
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Updater
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\UserCache.bin
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Collab\RSS
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\JavaScripts\glob.settings.js
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Preferences\AutoFillDefaults.dat
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Preferences\defaultHeuristics.dat
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Security\addressbook.acrodata
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Updater\Acrd705SD.exe
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Updater\udlog.txt
+C:\Documents and Settings\abhishek\Application Data\Adobe\Acrobat\7.0\Updater\udstore.js
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\CRLCache
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\eulaAccepted
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\CRLCache\5CB653B2DAF9459B6E8E3796503DD779BAD8DB50.crl
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\Background
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\lastUpdateCheck
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\Background\.complete
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\Background\META-INF
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\Background\mimetype
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\Background\updater
+C:\Documents and Settings\abhishek\Application Data\Adobe\AIR\Updater\Background\META-INF\signatures.xml
+C:\Documents and Settings\abhishek\Application Data\Adobe\Flash Player\AssetCache
+C:\Documents and Settings\abhishek\Application Data\Adobe\Flash Player\AssetCache\PSG45GDQ
+C:\Documents and Settings\abhishek\Application Data\Adobe\Flash Player\AssetCache\PSG45GDQ\381814F6F5270FFBB27E244D6138BC023AF9
+1D5.heu
+C:\Documents and Settings\abhishek\Application Data\Adobe\Flash Player\AssetCache\PSG45GDQ\381814F6F5270FFBB27E244D6138BC023AF9
+1D5.swz
+C:\Documents and Settings\abhishek\Application Data\Adobe\Flash Player\AssetCache\PSG45GDQ\cacheSize.txt
+C:\Documents and Settings\abhishek\Application Data\AdobeUM\AcRdB7_0_5.sta
+C:\Documents and Settings\abhishek\Application Data\CDXReader\cdxareader.ax
+C:\Documents and Settings\abhishek\Application Data\CoreFTP\4.dir
+C:\Documents and Settings\abhishek\Application Data\CoreFTP\5.dir
+C:\Documents and Settings\abhishek\Application Data\CoreFTP\6.dir
+C:\Documents and Settings\abhishek\Application Data\CoreFTP\7.dir
+C:\Documents and Settings\abhishek\Application Data\CoreFTP\8.dir
+***** D:\B.TXT
+D:\42c77e8e4f77fa130fe2de
+D:\982521853b98f90e29
+D:\9860bd6b7075f3ec1a
+D:\a.txt
+D:\Abhi
+D:\Abhishek7
+D:\abhishek_shared
+D:\AdbeRdr1010_mui_Std.zip
+D:\Application & utilities
+D:\Articles_Use of 'A' and 'An'
+D:\Articles_Use of 'A' and 'An'.rar
+D:\Automation test
+D:\b.txt
+D:\BackupScheduler_20140328
+D:\Boot_Linux.docx
+D:\c.txt
+D:\CBT
+D:\CMS Build for Video Upload Error
+D:\Content
+D:\Content Management System.appref-ms
+D:\Contents
+D:\DATA
+D:\data.txt
+D:\Database
+D:\Debug
+D:\Debug.rar
+D:\dotnetfx35setup.exe
+D:\driver.txt
+D:\fgr update
+D:\FGRSite
+D:\FMSWebprojectnews
+D:\FTP
+D:\johncena.jpg
+D:\Linux
+D:\Logs
+D:\New Folder
+D:\New Folder (2)
+D:\OldERPSChoolUtility
+D:\Permissions
+D:\RecommendedBooks-ExcelSheet
+D:\RecommendedBooks-ExcelSheet.rar
+D:\SETTING CMS UTILITY.docx
+D:\software
+D:\StoreApp
+D:\StoreApp.zip
+D:\SVN
+D:\test
+D:\Thumbnail
+D:\Timesheets
+D:\To Upload
+D:\To-Do-List-Abhi.xlsx
+D:\Ubuntu WebHosting Docs.docx
+D:\UpdaterLogFiles
+D:\UpdaterUtility
+D:\Utility for ERP SchoolMapping
+D:\vsftpd.conf
+D:\42c77e8e4f77fa130fe2de\mrt.exe
+D:\42c77e8e4f77fa130fe2de\mrtstub.exe
+D:\982521853b98f90e29\amd64
+D:\982521853b98f90e29\i386
+D:\9860bd6b7075f3ec1a\amd64
+D:\9860bd6b7075f3ec1a\i386
+D:\Abhi\Airtel Receipt
+D:\Abhi\Documents
+D:\Abhi\New Folder
+D:\Abhi\Airtel Receipt\9Apr2014.JPG
+D:\Abhi\Documents\10 Marksheet.jpg
+D:\Abhi\Documents\12 Certi..jpg
+D:\Abhi\Documents\12 Markssheet.jpg
+D:\Abhi\Documents\abhi.jpg
+D:\Abhi\Documents\Diploma Final.jpg
+D:\Abhi\Documents\Diploma I.jpg
+D:\Abhi\Documents\Diploma II.jpg
+D:\Abhi\Documents\New Microsoft Office Word Document.docx
+D:\Abhi\Documents\Scan0007.JPG
+D:\Abhi\Documents\Scan0008.JPG
+D:\Abhi\Documents\Scan0009.JPG
+D:\Abhi\Documents\Scan0010.JPG
+D:\Abhi\Documents\Scan0012.JPG
+D:\Abhi\Documents\Scan0013.JPG
+D:\Abhi\Documents\Scan0014.JPG
+D:\Abhi\Documents\Scan0015.JPG
+D:\Abhi\Documents\Scan0016.JPG
+D:\Abhi\Documents\Scan0017.JPG
+D:\Abhi\Documents\Scan0020.JPG
+D:\Abhi\Documents\Scan0021.JPG
+D:\Abhi\Documents\signature1.jpg
+D:\Abhi\New Folder\New Microsoft Office Word Document.docx
+D:\Abhishek7\025301562107.xls
+D:\Abhishek7\0789747359.pdf
+D:\Abhishek7\aa.txt
+D:\Abhishek7\abhi_cms.xlsx
+D:\Abhishek7\advisorinstaller.exe
+D:\Abhishek7\airtel_Jun2014.JPG
+D:\Abhishek7\assholle-calling[FreshMaza.Com].mp3
+D:\Abhishek7\attachments.zip
+D:\Abhishek7\attachments_dj
+D:\Abhishek7\attachments_dj.zip
+D:\Abhishek7\BBDPG3911P-201213.pdf
+D:\Abhishek7\Book2.xls
+*****
+
