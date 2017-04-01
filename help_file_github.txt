@@ -1,0 +1,22 @@
+1. install git client and server
+2. git init   -- for git initialization Initialized empty Git repository in C:/Users/Inder/Desktop/.git/
+3. git add <fileName>
+4. git commit -m <message>
+5. git remote add <Origin> <Path of Online git repository>   --https://github.com/smartclasseducational/smartclasscds.git
+6. git push -u <Origin> master 
+7. git pull <Path of Online git repository>
+
+https://github.com/smatclasseducational/smartclasscds.git
+
+fatal: unable to access 'https://github.com/smatclasseducational/smartclasscds.git/': Failed to connect to github.com port 443: Bad access
+
+user name : smatclasseducational
+Password  : smatclasseducational@1
+
+
+
+
+Authentication needed:
+
+git config --global user.email vipul.saxena@smartclasseducational.com
+git config --global user.name Vipul Saxena
