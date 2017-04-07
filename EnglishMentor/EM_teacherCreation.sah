@@ -1,0 +1,47 @@
+function loginUser($LoginForm_username, $LoginForm_password){
+		_setValue(_textbox("LoginUser$UserName"), $LoginForm_username);
+		_setValue(_password("LoginUser$Password"), $LoginForm_password);
+				try{
+			_click(_submit("Login"));
+					}catch($e){
+						_logException($e); // Logs the exception, but does not fail
+								}
+
+var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\EnglishMentor\\EMLoginCreation.xls", "Teacher");
+	for(var $i=0; $i<102; $i++)
+	{
+		try{
+		//Change Column name according to Input Excel sheet.
+		goToElement($exldata[$i]["LoginID"],$exldata[$i]["Name"],$exldata[$i]["Password"],$exldata[$i]["ClassA"],$exldata[$i]["ClassB"],$exldata[$i]["ClassC"],$exldata[$i]["ClassD"]);
+		//_log("Name of first user is: " + $exldata[$i]["File_Name"]+"  "+$exldata[$i]["Keyword"]+"  "+$exldata[$i]["FileName"] );
+			}catch($e){
+		_logException($e); // Logs the exception, but does not fail
+		}
+	}
+	//logout();
+}
+
+function goToElement($LoginID, $Name, $UserPassword, $ClassA, $ClassB, $ClassC, $ClassD ){
+		_click(_link("Teachers"));
+		_wait(2000);
+		_click(_button("Add"));
+		_wait(2000);
+        _setValue(_textbox("ctl00$MainContent$AddTeacher1$Wizard1$UserMasterAddEdit1$UsrIDTextBox1"), $LoginID);
+		_wait(2000);
+        _setValue(_textbox("ctl00$MainContent$AddTeacher1$Wizard1$UserMasterAddEdit1$UsrNameTextBox1"), $Name);
+		_wait(2000);
+        _setValue(_password("ctl00$MainContent$AddTeacher1$Wizard1$UserMasterAddEdit1$UsrPasswordTextBox"), $UserPassword);
+		_wait(2000);
+        _click(_submit("Next"));
+		_wait(2000);
+		if($ClassA !=null) { _click(_label($ClassA)); }
+		if($ClassB !=null) { _click(_label($ClassB)); }
+		if($ClassC !=null) { _click(_label($ClassC)); }
+		if($ClassD !=null) { _click(_label($ClassD)); }
+	    _wait(2000);
+		_click(_submit("Finish"));
+}
+
+function logout(){
+	_click(_link("Logout"));
+}

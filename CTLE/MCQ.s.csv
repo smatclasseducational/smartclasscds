@@ -1,0 +1,7 @@
+TestCase,Key Word,Argument1,
+,loadSahi,MCQ.sah,
+,,,
+Test login,[Documentation],username,password
+,loginUser,testc,a
+,,,
+Logout,logout,,

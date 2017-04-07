@@ -1,0 +1,35 @@
+function loginUser($LoginForm_username, $LoginForm_password){
+    _wait(2000);
+    _setValue(_textbox("LoginUser$UserName"), $LoginForm_username);
+    _wait(2000);
+    _setValue(_password("LoginUser$Password"), $LoginForm_password);
+    _wait(2000);
+    _click(_submit("Login"));
+    _wait(2000);
+    var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\CTLE\\CTLE.xlsx", "MetaTags");
+	for(var $i=0; $i<22; $i++)
+	{
+		try{
+		
+		goToElement($exldata[$i]["BookId"],$exldata[$i]["ChapterID"],$exldata[$i]["TopicId"],$exldata[$i]["QText"]);
+		
+			}catch($e){
+		_logException($e); 
+		}
+	}
+_wait(2000);
+//logout();	
+}
+function goToElement($BookId,  $ChapterID, $TopicId, $QText  ){
+   _navigateTo("http://10.0.20.15:8787/Lessons/Books/TopicLesson.aspx?chapterId="+$ChapterID+"&topicId="+$TopicId+"&Book="+$BookId);
+   _wait(2000);
+   _click(_link("Edit[1]"));
+   _wait(2000);
+   _setValue(_textarea("ctl00$MainContent$TopicLesson1$txtTopicMetaTag"), $QText);
+   _click(_button("Save[2]"));
+   _wait(5000);
+   _click(_link("My Page[1]"));
+                    }
+function logout(){
+	_click(_link("Logout"));
+}

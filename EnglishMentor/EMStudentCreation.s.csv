@@ -1,0 +1,7 @@
+TestCase,Key Word,Argument1,
+,loadSahi,EM_StudentCreation.sah,
+,,,
+Test login,[Documentation],username,password
+,loginUser,admin,admin@1
+,,,
+Logout,logout,,

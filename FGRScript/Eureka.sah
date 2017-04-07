@@ -1,0 +1,91 @@
+function loginUser($LoginForm_username, $LoginForm_password){
+        _wait(2000);
+		_setValue(_textbox("ctl00$ContentPlaceHolder1$Login1$UserName"), $LoginForm_username);
+		_wait(2000);
+		_setValue(_password("ctl00$ContentPlaceHolder1$Login1$Password"), $LoginForm_password);
+		_wait(2000);
+				try{
+			_click(_imageSubmitButton("ctl00$ContentPlaceHolder1$Login1$Button1"));
+			_wait(2000);
+			_wait(2000);
+            _click(_link("Eureka New License Request"));
+            _wait(2000);
+            _setValue(_textbox("ctl00$ContentPlaceHolder1$txtSearchERP"), "erp/test/0001");
+            _click(_submit("Get School(s)"));
+            _wait(2000);
+            _click(_link("Select[5]"));
+					}catch($e){
+						_logException($e); // Logs the exception, but does not fail
+								}
+
+var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\FGRScript\\EurekaNewRequest.xlsx", "Sheet1");
+	for(var $i=0; $i<22; $i++)
+	{
+		try{
+		//Change Column name according to Input Excel sheet.
+		goToElement($exldata[$i]["Product"],$exldata[$i]["LicenseID"],$exldata[$i]["StatusCode"],$exldata[$i]["username"],$exldata[$i]["UserEmail"],$exldata[$i]["UserMobile"],$exldata[$i]["Remarks"]);
+		//_log("Name of first user is: " + $exldata[$i]["File_Name"]+"  "+$exldata[$i]["Keyword"]+"  "+$exldata[$i]["FilePath"] );
+			}catch($e){
+		_logException($e); // Logs the exception, but does not fail
+		}
+	}
+	for(var $i=0; $i<22; $i++)
+	{
+		try{
+		//Change Column name according to Input Excel sheet.
+		goToApprove($exldata[$i]["Product"],$exldata[$i]["LicenseKey"],$exldata[$i]["File"]);
+			}catch($e){
+		_logException($e); // Logs the exception, but does not fail
+		}
+	}
+	//logout();
+}
+ function onScriptError($e){
+  _logExceptionAsFailure($e);
+  _focusWindow();
+ _takeScreenShot();
+  _navigateTo("http://10.0.20.31:9090/Default.aspx");
+  return true; // Forces Sahi to continue execution and not stop at error. 
+ }
+ 
+ 
+function goToElement($Product, $LicenseID, $StatusCode, $username, $UserEmail, $UserMobile, $Remarks){
+_wait(2000);
+_click(_label($Product));
+_wait(5000);
+//if($Product!="Eureka 5.0"){ _setValue(_textbox("ctl00$ContentPlaceHolder1$txtLicenseID"), $LicenseID); }
+if($Product=="Eureka 5.5"){ _setValue(_textbox("ctl00$ContentPlaceHolder1$txtLicenseID"), $LicenseID); }
+if($Product=="3DLab"){ 
+                        _click(_submit("Add"));
+						_setValue(_textbox("ctl00$ContentPlaceHolder1$txtLicenseID"), $LicenseID);
+                     }
+if($Product=="Eureka 5.5"){ _setValue(_textbox("ctl00$ContentPlaceHolder1$txtStatusCode"), $StatusCode); }
+_setValue(_textbox("ctl00$ContentPlaceHolder1$txtusername"), $username);
+_setValue(_textbox("ctl00$ContentPlaceHolder1$txtUserEmail"), $UserEmail);
+_setValue(_textbox("ctl00$ContentPlaceHolder1$txtUserMobile1"), $UserMobile);
+_setValue(_textarea("ctl00$ContentPlaceHolder1$txtRemarks"), $Remarks);
+_click(_submit("Save"));    
+_click(_link("Click Here To Raise A New Request"));   
+_takeScreenShot("D:\\FGR\\New_Request_"+$LicenseID+".jpg", false, {format:'jpg', resizePercentage:75});        
+}
+
+
+function goToApprove($Product, $LicenseKey, $File){
+_click(_link("Pending"));
+if($Product=="Eureka 5.5") { _setValue(_textbox("ctl00$ContentPlaceHolder1$gvschool$ctl02$txtRequestLicenseKey"), $LicenseKey);
+                             _click(_link("Save")); }
+if($Product=="3DLab") { _setFile2(_file("ctl00$ContentPlaceHolder1$GridView2$ctl02$LicenseKeyUp"), $File);
+                             _click(_link("Upload")); }
+if($Product=="Eureka 5.0") {  _setFile2(_file("ctl00$ContentPlaceHolder1$GridView1$ctl02$Fileuploadcontrol"), $File);
+                              _click(_link("Upload")); }							 
+_expectConfirm("Are you sure you want to approve?", true);
+_click(_link("Approve Request"));
+_assertEqual("Are you sure you want to approve?", _lastConfirm());
+_click(_submit("Back"));
+_wait(5000); 
+}
+ 
+ 
+ function logout(){
+	_click(_link("Sign Out"));
+}

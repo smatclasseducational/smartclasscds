@@ -1,0 +1,7 @@
+TestCase,Key Word,Argument1,
+,loadSahi,fgrScript.sah,
+,,,
+Test login,[Documentation],username,password
+,loginUser,saurabh.bhardwaj@educomp.com,a
+,,,
+Logout,logout,,

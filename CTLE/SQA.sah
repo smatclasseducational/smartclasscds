@@ -1,0 +1,55 @@
+function loginUser($LoginForm_username, $LoginForm_password){
+    _wait(2000);
+    _setValue(_textbox("LoginUser$UserName"), $LoginForm_username);
+    _wait(2000);
+    _setValue(_password("LoginUser$Password"), $LoginForm_password);
+    _wait(2000);
+    _click(_submit("Login"));
+    _wait(2000);
+    var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\CTLE\\CTLE.xlsx", "MetaTags");
+	for(var $i=0; $i<22; $i++)
+	{
+		try{
+		
+		goToElement($exldata[$i]["BookId"],$exldata[$i]["ChapterID"],$exldata[$i]["TopicId"],$exldata[$i]["QText"]);
+		
+			}catch($e){
+		_logException($e); 
+		}
+	}
+_wait(2000);
+//logout();	
+}
+
+function goToElement($BookId, $Chapter, $ChapterID, $TopicId, $MediaType, $BloomLevel, $QText, $Ans1,  $Keyword, $DispName){
+  _navigateTo("http://10.0.20.15:8787/Lessons/Books/ChapterList.aspx?id="+$BookId);
+  _wait(5000);
+  _click(_span($Chapter));                 
+  _wait(2000);
+  _click(_link("Edit[2]"));
+  _wait(5000);
+  _click(_link("Edit"));
+  _wait(2000);
+  _selectWindow("Win");
+  //  if($MediaType=="mathjax"){
+  //  _check(_radio("rblMediaType_1"));}
+  _wait(2000);
+  _setSelected(_select("ctl00$MainContent$SQAEditor$ddlBloomLevel"), $BloomLevel);
+  _wait(2000);
+  _rteWrite(_rte(0), $QText);               
+  _setValue(_hidden("MainContent_SQAEditor_QHTML_WebHtmlEditor1_t_a"), $QText);					                      
+  _wait(2000);
+  _rteWrite(_rte(1), $Ans1);               
+  _setValue(_hidden("MainContent_SQAEditor_AnsHTML_WebHtmlEditor1_t_a"), $Ans1);
+  _wait(2000);
+  _click(_submit("Save"));
+  _wait(5000);
+  _selectWindow();
+   //  if($MediaType=="mathjax"){
+   // _check(_radio("rblMediaType_1"));}
+	_setValue(_textbox("ctl00$MainContent$SQAControl$SearchKeyWord$txtKeywords"), $Keyword);
+					_wait(2000);
+                    _setValue(_textbox("ctl00$MainContent$SQAControl$EditElementName$txtElementName"), $DispName);
+					_wait(2000);
+					_click(_submit("Save & Close"));
+					_wait(5000);

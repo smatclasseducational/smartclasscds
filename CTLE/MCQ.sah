@@ -1,0 +1,82 @@
+function loginUser($LoginForm_username, $LoginForm_password){
+    _wait(2000);
+    _setValue(_textbox("LoginUser$UserName"), $LoginForm_username);
+    _wait(2000);
+    _setValue(_password("LoginUser$Password"), $LoginForm_password);
+    _wait(2000);
+    _click(_submit("Login"));
+    _wait(2000);
+    var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\CTLE\\MCQ.xlsx", "Sheet1");
+	for(var $i=0; $i<22; $i++)
+	{
+		try{
+		
+		goToElement($exldata[$i]["Id"],$exldata[$i]["MediaType"],$exldata[$i]["BloomLevel"],$exldata[$i]["QText"],$exldata[$i]["Ans1"],$exldata[$i]["Ans2"],$exldata[$i]["Ans3"],$exldata[$i]["Ans4"],$exldata[$i]["ErrorTaggingA"],$exldata[$i]["ErrorTaggingB"],$exldata[$i]["ErrorTaggingC"],$exldata[$i]["ErrorTaggingD"],$exldata[$i]["Keyword"],$exldata[$i]["DispName"]);
+		
+			}catch($e){
+		_logException($e); 
+		}
+	}
+_wait(2000);
+//logout();	
+}
+function goToElement($Id, $MediaType, $BloomLevel, $QText, $Ans1, $Ans2, $Ans3, $Ans4, $ErrorTaggingA, $ErrorTaggingB, $ErrorTaggingC, $ErrorTaggingD, $Keyword, $DispName){
+                    _click(_link("Search Element"));
+					_wait(5000);
+                    _setValue(_textbox("ctl00$MainContent$ContentLinkedWithTopics1$ContentSearch$txtKeywords"), $Id);
+					_wait(5000);
+                    _click(_submit("Search"));
+					_wait(2000);
+				    _click(_link("Edit[1]"));
+				    _wait(2000);
+				    _click(_link("Edit"));
+                    _selectWindow("Win");
+				    _wait(2000);
+				    _setSelected(_select("ctl00$MainContent$AddToQuestionBank1$QuestionEditor1$ddlBloomLevel"), $BloomLevel);
+				    _wait(2000);
+				    _rteWrite(_rte(0), $QText);               
+                    _setValue(_hidden("MainContent_AddToQuestionBank1_QuestionEditor1_QEditer_WebHtmlEditor1_t_a"), $QText);
+				    _wait(2000);
+				    _rteWrite(_rte(1), $Ans1);               
+                    _setValue(_hidden("MainContent_AddToQuestionBank1_QuestionEditor1_AEditor_WebHtmlEditor1_t_a"), $Ans1);
+				    _wait(2000);
+				    _setSelected(_select("ctl00$MainContent$AddToQuestionBank1$QuestionEditor1$ddlA"), $ErrorTaggingA);
+				    _wait(2000);
+				    if($ErrorTaggingA=="Correct Answer"){_check(_radio("MainContent_AddToQuestionBank1_QuestionEditor1_RadioButton1"));}
+				    _wait(2000);
+				    _rteWrite(_rte(2), $Ans2);               
+                    _setValue(_hidden("MainContent_AddToQuestionBank1_QuestionEditor1_BEditor_WebHtmlEditor1_t_a"), $Ans2);
+				    _wait(2000);
+				    _setSelected(_select("ctl00$MainContent$AddToQuestionBank1$QuestionEditor1$ddlB"), $ErrorTaggingB);
+				    _wait(2000);
+				    if($ErrorTaggingB=="Correct Answer"){_check(_radio("MainContent_AddToQuestionBank1_QuestionEditor1_RadioButton2"));}
+				    _wait(2000);
+				    _rteWrite(_rte(3), $Ans3);               
+                    _setValue(_hidden("MainContent_AddToQuestionBank1_QuestionEditor1_CEditor_WebHtmlEditor1_t_a"), $Ans3);
+				    _wait(2000);
+				    _setSelected(_select("ctl00$MainContent$AddToQuestionBank1$QuestionEditor1$ddlC"), $ErrorTaggingC);
+				    _wait(2000);
+				    if($ErrorTaggingC=="Correct Answer"){_check(_radio("MainContent_AddToQuestionBank1_QuestionEditor1_RadioButton3"));}
+				    _wait(2000);
+				    _rteWrite(_rte(4), $Ans4);               
+                    _setValue(_hidden("MainContent_AddToQuestionBank1_QuestionEditor1_DEditor_WebHtmlEditor1_t_a"), $Ans4);
+				    _wait(2000);
+				    _setSelected(_select("ctl00$MainContent$AddToQuestionBank1$QuestionEditor1$ddlD"), $ErrorTaggingD);
+				    _wait(2000);
+				    if($ErrorTaggingD=="Correct Answer"){_check(_radio("MainContent_AddToQuestionBank1_QuestionEditor1_RadioButton4"));}
+				    _wait(2000);
+                    _click(_submit("Add to List"));
+                    _selectWindow();
+				    _wait(2000);
+                    _setValue(_textbox("ctl00$MainContent$MCQ1$SearchKeyWord$txtKeywords"), $Keyword);
+				    _wait(2000);
+                    _setValue(_textbox("ctl00$MainContent$MCQ1$EditElementName$txtElementName"), $DispName);
+				    _wait(2000);
+                    _click(_submit("Save"));
+                    _assertEqual("Saved Successfully.", _lastAlert());
+					_wait(5000);
+                    _click(_link("My Page[1]"));				
+}
+function logout(){
+	_click(_link("Logout"));
+}

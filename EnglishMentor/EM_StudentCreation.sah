@@ -1,0 +1,45 @@
+function loginUser($LoginForm_username, $LoginForm_password){
+		_setValue(_textbox("LoginUser$UserName"), $LoginForm_username);
+		_setValue(_password("LoginUser$Password"), $LoginForm_password);
+				try{
+			_click(_submit("Login"));
+					}catch($e){
+						_logException($e); // Logs the exception, but does not fail
+								}
+
+var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\EnglishMentor\\EMLoginCreation.xls", "Student");
+	for(var $i=0; $i<803; $i++)
+	{
+		try{
+		//Change Column name according to Input Excel sheet.
+		goToElement($exldata[$i]["Name"],$exldata[$i]["Class"],$exldata[$i]["Section"],$exldata[$i]["RemoteNumber"],$exldata[$i]["RollNo"]);
+		//_log("Name of first user is: " + $exldata[$i]["File_Name"]+"  "+$exldata[$i]["Keyword"]+"  "+$exldata[$i]["FileName"] );
+			}catch($e){
+		_logException($e); // Logs the exception, but does not fail
+		}
+	}
+	//logout();
+}
+
+function goToElement($Name, $Class, $Section, $RemoteNumber, $RollNo){
+		_click(_link("Students"));
+		_wait(2000);
+		_click(_button("Add"));
+		_wait(2000);
+        _setValue(_textbox("ctl00$MainContent$AddStudent1$FormView1$NameTextBox1"), $Name);
+		_wait(2000);
+		_click(_link($Class));
+		_wait(2000);
+        _setValue(_textbox(2), $Section);
+		_wait(2000);
+        _setValue(_textbox("ctl00$MainContent$AddStudent1$FormView1$SASRemotIDTextBox1"), $RemoteNumber);
+		_wait(2000);
+		_setValue(_textbox("ctl00$MainContent$AddStudent1$FormView1$RollNoTextBox1"), $RollNo);
+		_wait(2000);
+        _click(_submit("Add"));
+		_wait(2000);
+}
+
+function logout(){
+	_click(_link("Logout"));
+}
