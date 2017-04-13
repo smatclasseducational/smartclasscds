@@ -1,0 +1,32 @@
+var $exldata = _readExcelFile("C:\\Users\\Administrator\\sahi_pro\\userdata\\scripts\\EnglishMentor\\EMLoginCreation.xls", "Teacher");
+	for(var $i=0; $i<101; $i++)
+	{
+		try{
+		//Change Column name according to Input Excel sheet.
+		goToElement($exldata[$i]["LoginID"],$exldata[$i]["Name"],$exldata[$i]["Password"],$exldata[$i]["ClassA"],$exldata[$i]["ClassB"],$exldata[$i]["ClassC"],$exldata[$i]["ClassD"]);
+		//_log("Name of first user is: " + $exldata[$i]["File_Name"]+"  "+$exldata[$i]["Keyword"]+"  "+$exldata[$i]["FileName"] );
+			}catch($e){
+		_logException($e); // Logs the exception, but does not fail
+		}
+	}
+function goToElement($LoginID, $Name, $UserPassword, $ClassA, $ClassB, $ClassC, $ClassD ){
+        _setValue(_textbox("LoginUser$UserName"), $LoginID);
+		_wait(2000);
+		_setValue(_password("LoginUser$Password"), $UserPassword);
+		_wait(2000);
+		_click(_submit("Login"));
+		_wait(5000);
+		if($ClassA !=null) {
+		                    _assertExists(_span($ClassA +" English Mentor 2012"));
+						   _wait(2000);   }
+		if($ClassB !=null) { _assertExists(_span($ClassB +" English Mentor 2012"));
+                             _wait(2000);		}
+		if($ClassC !=null) { _assertExists(_span($ClassC +" English Mentor 2012"));
+                             _wait(2000);		
+							}
+		if($ClassD !=null) { _assertExists(_span($ClassD +" English Mentor 2012")); 
+		                     _wait(2000);
+							}
+		_click(_link("Logout"));
+		_wait(5000);
+}
